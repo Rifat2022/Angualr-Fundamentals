@@ -1,29 +1,47 @@
 import { Component , OnInit} from '@angular/core'
-import { FormControl, FormGroup , FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { FormControl, FormGroup , FormsModule, ReactiveFormsModule, Validators} from '@angular/forms'
 import { AuthService } from './auth.service'
 import { Router } from '@angular/router'
 @Component({
-  templateUrl: './profile.component.html'
+  templateUrl: './profile.component.html', 
+  styles: [`
+      em {float: right; color: #E05C65 ; padding-left: 10px }
+      .error input {background-color: #E3C3C5}
+      .error ::-webkit-input-placeholder {color: #999}
+      .error ::-moz-placeholder {color: #999}
+      .error :-moz-placeholder {color: #999}
+      .error :ms-input-placeholder {color: #999}
+  `]
 })
 export class ProfileComponent implements OnInit {
+  firstName: FormControl
+  lastName: FormControl
   constructor(private authService: AuthService, private router: Router){}
 
   profileForm: FormGroup
        ngOnInit(): void {
-        let firstName = new FormControl(this.authService.currentUser.firstName)
-        let lastName = new FormControl(this.authService.currentUser.lastName)
+        this.firstName = new FormControl(this.authService.currentUser.firstName, [Validators.required, Validators.pattern('[a-zA-Z].*')])
+        this.lastName = new FormControl(this.authService.currentUser.lastName, [Validators.required, Validators.pattern('[a-zA-Z].*')])
 
         this.profileForm = new FormGroup({
-          firstName: firstName, 
-          lastName: lastName
+          firstName: this.firstName, 
+          lastName: this.lastName
         })       
        }
        cancel(){
         this.router.navigate(['/events'])
        }
        saveProfile(formValues){
-        this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
-        this.router.navigate(['/events'])
-
+        if(this.profileForm.valid){
+          this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
+          this.router.navigate(['/events'])
+        }
        }
+       validateFirstName(){
+        return this.firstName.valid || this.firstName.untouched
+       }
+       validateLastName(){
+        return this.lastName.valid || this.lastName.untouched
+       }
+       
 }
