@@ -21,8 +21,7 @@ export class ProfileComponent implements OnInit {
     private authService: AuthService, 
     private router: Router, 
     @Inject(TOASTR_TOKEN) private toastr: Toastr, 
-    )
-    {}
+  ){}
 
   profileForm: FormGroup
        ngOnInit(): void {
