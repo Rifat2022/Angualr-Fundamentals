@@ -1,7 +1,6 @@
 import { toBase64String } from '@angular/compiler/src/output/source_map';
 import {Component, OnInit} from '@angular/core';
 import { EventService } from './shared/event.service';
-import {ToastrService } from '../common/toastr.service'
 import { ActivatedRoute } from '@angular/router';
 import { IEvent } from './shared/index';
 
@@ -14,7 +13,7 @@ import { IEvent } from './shared/index';
                 
                 <div class="row">
                     <div class="col-md-5" *ngFor="let event of events">
-                        <event-thumbnil (click)="handleThumbnilClick(event.name)" [event]="event" > </event-thumbnil> 
+                        <event-thumbnil  [event]="event" > </event-thumbnil> 
                     </div>
                 </div>                              
             </div>
@@ -23,7 +22,7 @@ import { IEvent } from './shared/index';
 })
 export class EventListComponent implements OnInit{
    events:IEvent[]; 
-   constructor(private eventService: EventService, private toastr: ToastrService, private route: ActivatedRoute) {
+   constructor(private eventService: EventService, private route: ActivatedRoute) {
     //super();
     
    }
@@ -33,7 +32,5 @@ export class EventListComponent implements OnInit{
     // });
     this.events = this.route.snapshot.data['events']
    }
-   handleThumbnilClick(eventName){
-    this.toastr.success(eventName); 
-   }
+   
 }
