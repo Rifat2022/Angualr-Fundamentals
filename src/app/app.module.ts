@@ -22,7 +22,10 @@ import {
   EventListResolver,
   EventService,
   CreateSessionComponent,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent,
+  voterService,
+  LocationValidator
 } from './events/index'
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -51,7 +54,9 @@ let jQuery =window['$']
     CollapsibleWellComponent, 
     DurationPipe, 
     SimpleModalComponent, 
-    ModalTriggerDirective
+    ModalTriggerDirective, 
+    UpvoteComponent,
+    LocationValidator
   ], 
   bootstrap: [EventsAppComponent], 
   providers: [
@@ -65,6 +70,7 @@ let jQuery =window['$']
     }, 
     EventListResolver, 
     AuthService,
+    voterService
   ]
 })
 export class AppModule { }
