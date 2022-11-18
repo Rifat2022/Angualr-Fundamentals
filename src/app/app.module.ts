@@ -18,14 +18,15 @@ import {
   EventThumbnilComponent,
   EventListComponent,
   CreateEventComponent,
-  EventRouteActivator,
+
   EventListResolver,
   EventService,
   CreateSessionComponent,
   DurationPipe,
   UpvoteComponent,
   voterService,
-  LocationValidator
+  LocationValidator,
+  EventResolver
 } from './events/index'
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -64,7 +65,7 @@ let jQuery =window['$']
     EventService, 
     {provide: TOASTR_TOKEN, useValue: toastr}, 
     {provide: JQ_TOKEN, useValue: jQuery}, 
-    EventRouteActivator, 
+     EventResolver,
     {
       provide: 'canDeactivateCreateEvent',     
       useValue: checkDirtyState
