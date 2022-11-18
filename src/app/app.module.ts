@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http'
 import {EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { appRoute } from './route';
@@ -39,7 +39,8 @@ let jQuery =window['$']
     BrowserModule, 
     RouterModule.forRoot(appRoute), 
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule
   ],
   declarations: [
     EventsAppComponent, 
