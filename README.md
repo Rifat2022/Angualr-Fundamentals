@@ -6,13 +6,13 @@ This project was created to teach and learn the fundamentals of Angular. It is a
 
 ![Login page Screenshot](./src/assets/screenshots/user-login-page.png?raw=true)
 
-![event-new page Screenshot](./assets/screenshots/event-new-page.png?raw=true)
+![event-new page Screenshot](./src/assets/screenshots/event-new-page.png?raw=true)
 
-![vents-1 page Screenshot](./assets/screenshots/events-1-page.png?raw=true)
+![vents-1 page Screenshot](./src/assets/screenshots/events-1-page.png?raw=true)
 
-![events page Screenshot](./assets/screenshots/events-page.png?raw=true)
+![events page Screenshot](./src/assets/screenshots/events-page.png?raw=true)
 
-![session-add page Screenshot](./assets/screenshots/session-add-page.png?raw=true)
+![session-add page Screenshot](./src/assets/screenshots/session-add-page.png?raw=true)
 
 ## Prerequisites
 - **Node.js**
