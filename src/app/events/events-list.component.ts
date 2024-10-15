@@ -12,7 +12,7 @@ import { IEvent } from './shared/index';
                 <hr>  
                 
                 <div class="row">
-                    <div class="col-md-5" *ngFor="let event of events">
+                    <div class="col-md-5" *ngFor="let event of events" onclick="">
                         <event-thumbnil  [event]="event" > </event-thumbnil> 
                     </div>
                 </div>                              

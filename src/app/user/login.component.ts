@@ -8,13 +8,13 @@ import { Router } from "@angular/router";
         em { float: right; color: #E05C65; padding-left: 10px; }
     `]
 })
-export class LoginComponent{
+export class LoginComponent {
     constructor(private authService: AuthService, private router: Router){}
     userName
     password
     mouseoverLogin
     loginInvalid = false
-    login(formValues){
+    login(formValues) {
         this.authService.loginUser(formValues.userName, formValues.password)
             .subscribe( resp =>  {
                 if(!resp){

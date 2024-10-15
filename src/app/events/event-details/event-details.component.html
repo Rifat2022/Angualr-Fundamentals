@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="col-md-2">
-      <a (click)="addSession()">Add Session</a>
+      <a (click)="addSession()"><button class="btn btn-primary">Add Session</button></a>
     </div>
   </div>
   <session-list [eventId]="event?.id" [sortBy]="sortBy" [filterBy]="filterBy" *ngIf="!addMode" [sessions]="event?.sessions"> </session-list>

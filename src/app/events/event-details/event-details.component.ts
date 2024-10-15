@@ -16,10 +16,12 @@ export class EventDetailsComponent implements OnInit {
     filterBy: string = 'all';
     sortBy: string = 'votes';
 
-    constructor(private eventService: EventService, private route: ActivatedRoute) { }
+    constructor(private eventService: EventService, private route: ActivatedRoute) {
+        
+    }
     ngOnInit() {
         this.route.data.forEach((params: Params) => {
-            this.eventService.getEvent(+params['id']).subscribe((event: IEvent) => {
+            this.eventService.getEvent(+params.event['id']).subscribe((event: IEvent) => {
                 this.event = event;
                 this.addMode = false;
             })
