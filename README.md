@@ -3,6 +3,11 @@
 
 ## Introduction
 This project was created to teach and learn the fundamentals of Angular. It is a pure Angular application, with a small Node.js server configured to fetch data from a dummy database.
+![Login page Screenshot](./assets/screenshots/user-login-page.png)
+![event-new page Screenshot](./assets/screenshots/event-new-page.png)
+![vents-1 page Screenshot](./assets/screenshots/events-1-page.png)
+![events page Screenshot](./assets/screenshots/events-page.png)
+![session-add page Screenshot](./assets/screenshots/session-add-page.png)
 
 ## Prerequisites
 - **Node.js**
