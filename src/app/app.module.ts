@@ -4,7 +4,7 @@ import {HttpClientModule} from '@angular/common/http'
 import {EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { appRoute } from './route';
-import {RouterModule} from '@angular/router'; 
+import {Router, RouterModule} from '@angular/router'; 
 import { Error404Component } from './errors/404.component';
 import {JQ_TOKEN, 
   TOASTR_TOKEN, 

@@ -1,14 +1,18 @@
 <div class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">Simple Events</a>
+      <a class="navbar-brand" routerLink="/events"><i class="bi bi-house"></i> Simple Events</a>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a [routerLink]="['/events']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><button
-              class="btn btn-danger">All Events </button></a>
+          <a class="button" 
+          [routerLink]="['/events']" 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}"
+          >
+          <i class="bi bi-calendar4-event"></i> All Events</a>
         </li>
         <li><a [routerLink]="['/events/new']" routerLinkActive="active">Create Event</a></li>
         <li class="dropdown">

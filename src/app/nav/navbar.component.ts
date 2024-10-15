@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Inject } from '@angular/core'
 import { EventService, ISession } from '../events';
 import { AuthService } from '../user/auth.service'
 @Component({
@@ -27,4 +27,5 @@ export class NavBarComponent {
             this.foundSessions = sessions;
         })
     }
+
 }
