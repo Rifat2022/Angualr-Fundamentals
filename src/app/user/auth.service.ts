@@ -6,9 +6,7 @@ import { IUser } from "./user.model";
 @Injectable()
 export class AuthService {
     currentUser: IUser
-    constructor(private http: HttpClient){
-
-    }
+    constructor(private http: HttpClient){}
     loginUser(userName: string, password: string){
         // this.currentUser = {
         //     id:1 , 

@@ -1,0 +1,5 @@
+1. Clone the project 
+2. Run the command "npm install" in the root directory.
+3. Run the server in a termina using the cmd: "npm run server"
+4. Start the application in other terminal using the cmd: "npm start"
+5. You may login as username "johnpapa" and give any password in the password. 
